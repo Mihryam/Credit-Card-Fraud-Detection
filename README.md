@@ -32,3 +32,10 @@ An accuracy score of 66% was gotten, with roc score of 80% using batch size of 3
 
 # Deep Auto Encoder
 Model was trained on normal transactions because I wanted it to detect any abnormality on new transactions presented to it. The Fraudulent Class was included in the test data. Training was done with 100 epochs and a batch size of 32 samples. 20% tst size was used with 18 fraud cases and 3170 normal cases. The model had an acuracy of 98.1% correctly classifying 17 out of the 18 fraud cases and 3113 out of 3170 normal cases.
+
+# Logistic Regression (Vanilla)
+The term "vanilla" generally refers to a basic or standard approach without any additional features or modifications. In the context of machine learning, vanilla logistic regression is a straightforward algorithm that can be used for binary classification problems. Although there are other approaches such as smote , etc, i will be working with only this approach.
+Using 35% of the data as test size with 168 fraud cases in it, the model correctly classified 129 of them and incorrectly classified 39 of them. It gave us a 99% accuracy score.
+
+# Conclusion
+In summary, our models did well in classifying the frauduletn transactions correctly, but the logistic regression model had the highest accuracy of 99%. But I would highly recommend the use of the results from the deep auto encoders as it will perform better in real time detection than the Logistic regression model. There are other algorithms out there to be used for th detection of frauds, plase do well to check them out
