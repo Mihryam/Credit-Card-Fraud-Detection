@@ -23,3 +23,12 @@ The algorithms used were Logistic Regresssion, K- Means, and Auto Encoders. I wi
 * K-Means: K-means is an unsupervised classification algorithm, also called clusterization, that groups objects into k groups based on their characteristics. The grouping is done minimizing the sum of the distances between each object and the group or cluster centroid.
 
 * Autoencoders: An autoencoder is a neural network model that can be used to learn a compressed representation of raw data. It takes as input large data size and reconstructs it.
+
+
+# Simple Auto Encoder
+In this algorithm 20,000 normal transaction data was used in training with 400 fraudulent data transaction. I had to choos this because I wanted to teach the auto encoder what normal data looks like. If i take more abnormal data than the normal data, the auto encoder will learn that the fraudulent data is normal and wouldn't give us the results that we want.
+29 Columns were encoded into 12 features using the encoder. Finally the decoder expanded the 12 features back to our original features being 29.
+An accuracy score of 66% was gotten, with roc score of 80% using batch size of 32 and 20 epochs
+
+# Deep Auto Encoder
+Model was trained on normal transactions because I wanted it to detect any abnormality on new transactions presented to it. The Fraudulent Class was included in the test data. Training was done with 100 epochs and a batch size of 32 samples. 20% tst size was used with 18 fraud cases and 3170 normal cases. The model had an acuracy of 98.1% correctly classifying 17 out of the 18 fraud cases and 3113 out of 3170 normal cases.
